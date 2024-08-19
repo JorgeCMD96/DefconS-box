@@ -1,14 +1,17 @@
 {
-  "Id": "9f832399-4887-46b0-8f21-2ee284f538e2",
+  "__guid": "6df8df9c-2d73-470a-b63c-f4342a28c9c0",
   "GameObjects": [
     {
-      "Id": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+      "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+      "Flags": 0,
       "Name": "Sun",
       "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+      "Tags": "light_directional,light",
       "Enabled": true,
       "Components": [
         {
-          "__type": "DirectionalLight",
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "fda88a68-e8bd-47f2-98e0-ec4d3b460801",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.94419,0.97767,1,1",
@@ -18,170 +21,76 @@
       ]
     },
     {
-      "Id": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "Flags": 0,
       "Name": "2D Skybox",
+      "Tags": "skybox",
       "Enabled": true,
       "Components": [
         {
-          "__type": "SkyBox2D",
-          "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "09620ca9-5030-4ede-bebb-db8a0a7740e9",
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
           "Tint": "1,1,1,1"
         },
         {
-          "__type": "EnvmapProbe",
+          "__type": "Sandbox.EnvmapProbe",
+          "__guid": "45b479e1-adfb-46bb-8461-1c116edd766f",
+          "Texture": "textures/cubemaps/default2.vtex",
           "Bounds": {
             "Mins": "-512,-512,-512",
             "Maxs": "512,512,512"
           },
+          "DelayBetweenUpdates": 0.1,
           "Feathering": 0.02,
+          "FrameInterval": 5,
+          "MaxDistance": 512,
           "Projection": "Sphere",
-          "Texture": "textures/cubemaps/default2.vtex",
-          "TintColor": "1,1,1,1"
+          "RenderDynamically": false,
+          "TintColor": "1,1,1,1",
+          "UpdateStrategy": "OnEnabled",
+          "ZFar": 4096,
+          "ZNear": 16
         }
       ]
     },
     {
-      "Id": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+      "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+      "Flags": 0,
       "Name": "Plane",
       "Scale": "5,5,5",
       "Enabled": true,
       "Components": [
         {
-          "__type": "ModelRenderer",
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "ba82650e-28a4-46b9-8487-478a392cf82e",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/plane.vmdl",
           "RenderType": "On",
           "Tint": "0.39546,0.51163,0.27128,1"
         },
         {
-          "__type": "BoxCollider",
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "1883d486-7aa5-4994-9737-416f716ca07d",
           "Center": "0,0,-5",
           "IsTrigger": false,
           "Scale": "100,100,10",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
-      "Id": "3c2490ef-54a0-49bb-8f13-490e40aa51d1",
-      "Name": "Cube",
-      "Position": "21.41682,74.1244,14.40159",
-      "Rotation": "0.00000001819328,-0.00000000000000008235059,0.3052325,0.952278",
-      "Scale": "0.5632889,0.5632889,0.5632889",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0,0.93333,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Rigidbody",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
-      "Id": "523e3e8f-a4ec-4ec1-af9a-d86ffc9c17e1",
-      "Name": "Cube (1)",
-      "Position": "40.81348,46.97572,14.40159",
-      "Rotation": "0.00000001819328,-0.00000000000000008235059,0.3052325,0.952278",
-      "Scale": "0.5632889,0.5632889,0.5632889",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0,0.93333,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Rigidbody",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
-      "Id": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
-      "Name": "Cube (2)",
-      "Position": "49.53707,34.08896,43.67614",
-      "Rotation": "0.00000001819328,-0.00000000000000008235059,0.3052325,0.952278",
-      "Scale": "0.5632889,0.5632889,0.5632889",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0,0.93333,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Rigidbody",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
-      "Id": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "Flags": 0,
       "Name": "Camera",
       "Position": "-267.452,-379.653,297.7903",
       "Rotation": "-0.1448582,0.2860239,0.4279631,0.8450171",
       "Enabled": true,
       "Components": [
         {
-          "__type": "CameraComponent",
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "397ced1a-2842-4eb6-90dc-e15fd42fa6a2",
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
@@ -197,7 +106,8 @@
           "ZNear": 10
         },
         {
-          "__type": "Bloom",
+          "__type": "Sandbox.Bloom",
+          "__guid": "26cf7b6a-41c2-4b13-b607-21129ca428fc",
           "BloomColor": {
             "color": [
               {
@@ -207,7 +117,8 @@
                 "t": 1,
                 "c": "1,1,1,1"
               }
-            ]
+            ],
+            "alpha": []
           },
           "BloomCurve": [
             {
@@ -224,24 +135,48 @@
           "ThresholdWidth": 0.5
         },
         {
-          "__type": "Tonemapping",
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "1c5426c4-39d7-4162-924e-610d09805ea4",
+          "__version": 1,
+          "ExposureBias": 2,
           "ExposureCompensation": 0,
+          "ExposureMethod": "RGB",
           "MaximumExposure": 2,
           "MinimumExposure": 1,
+          "Mode": "Legacy",
           "Rate": 1
         },
         {
-          "__type": "Sharpen",
+          "__type": "Sandbox.Sharpen",
+          "__guid": "5eb742d9-fc34-43d4-be4c-39dd59a01600",
           "Scale": 0.2
+        }
+      ]
+    },
+    {
+      "__guid": "019d6828-69b1-4631-8de6-0d6fff8e52bc",
+      "Flags": 0,
+      "Name": "computer_low",
+      "Position": "148.7113,-24.20596,0.00001004907",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "b8fcef7d-944a-4175-9bc3-628765dc05b0",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/props_spytech/computer_low.vmdl",
+          "Tint": "1,1,1,1"
         }
       ]
     }
   ],
   "SceneProperties": {
     "FixedUpdateFrequency": 50,
-    "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -260,6 +195,9 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-08T13:32:32.3548959\u002B00:00",
-  "__references": []
+  "ResourceVersion": 1,
+  "__references": [
+    "tfassets.computer_low"
+  ],
+  "__version": 1
 }
